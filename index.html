@@ -22,6 +22,7 @@
 		.jumbotron {
 			text-align: center;
 		}
+	
     </style>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -31,7 +32,7 @@
     <![endif]-->
   </head>
 
-  <body>
+  <body onload="fetchBookmarks()">
 
     <div class="container">
 
@@ -50,18 +51,17 @@
       <div class="jumbotron">
         <h3>Bookmark Your Favourite Sites</h3>
         
-		<form id="bookmarksForm" action="">
+		<form id="bookmarksForm">
 			<div class="form-group">
-			    <label for="websitename">Site Name</label>
-			    <input type="text" class="form-control" id="websitename" placeholder="Website Name">
+			    <label>Site Name</label>
+			    <input type="text" class="form-control" id="websiteName" placeholder="Website Name">
 			 </div>
 			 <div class="form-group">
-			    <label for="websiteurl">Site URL</label>
-			    <input type="text" class="form-control" id="websiteurl" placeholder="Website URL">
+			    <label>Site URL</label>
+			    <input type="text" class="form-control" id="websiteUrl" placeholder="Website URL">
 			 </div>
-		</form>
-
-        <p><a class="btn btn-lg btn-info" href="#" role="button">Submit</a></p>
+			 <button type="submit" class="btn btn-lg btn-primary">Submit</button>
+		</form>      
       </div> <!-- /jumbotron -->
 
       <div class="row">
@@ -72,6 +72,7 @@
       	</div>
       </div>
      
+		<hr>
 
       <footer class="footer">
         <p>&copy; 2017 Aidosmf.</p>
